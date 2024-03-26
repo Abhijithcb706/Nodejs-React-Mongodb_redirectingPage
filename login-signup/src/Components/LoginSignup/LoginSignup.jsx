@@ -4,7 +4,7 @@ import axios from 'axios';
 import user_icon from '../Assets/person.png';
 import email_icon from '../Assets/email.png';
 import password_icon from '../Assets/password.png';
-import Home from '../dashboard/Home';
+// import Home from '../pages/Home';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ const LoginSignup = () => {
       
 
     useEffect(()=>{
-        console.log("Form data changed");
+        console.log("data changed");
         },[formData])
         const handleChange = (e) => {
           const { name, value } = e.target;
@@ -42,7 +42,7 @@ const LoginSignup = () => {
         if(action==="Login"){
             axios.post('http://localhost:5000/login', formData)
     .then(response => {
-      alert("Login Successful")
+      // alert("Logged In")
       homePage()
       console.log(response.data);
     })
@@ -53,6 +53,7 @@ const LoginSignup = () => {
         else{
             axios.post('http://localhost:5000/signup', formData)
             .then(response => {
+              alert("User created")
               console.log(response.data);
             })
             .catch(error => {

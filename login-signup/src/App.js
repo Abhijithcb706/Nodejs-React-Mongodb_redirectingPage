@@ -6,7 +6,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Home from './Components/dashboard/Home';
+import Home from './Components/pages/Home';
 
 function App() {
   return (

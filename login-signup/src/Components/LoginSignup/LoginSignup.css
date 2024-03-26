@@ -8,6 +8,7 @@
     padding-bottom: 30px;
     border-radius: 20px;
     box-shadow: 5px 3px 15px black;
+    height: 100vh;
 }
 .header{
     display: flex;
@@ -70,7 +71,7 @@
 .submit-container{
     display: flex;
     gap:30px;
-    margin: 60px auto;
+    margin: 60px;
 }
 .submit{
     display: flex;

@@ -20,11 +20,8 @@ mongoose
     }
   )
   .then(() => {
-    console.log("Database connected");
+    console.log("db connected");
   });
-app.listen(port, () => {
-  console.log(`Server is running on port : ${port}`);
-});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -60,8 +57,9 @@ app.post("/signup", async (req, res) => {
     password: hashedPassword,
   });
 
-  newData.save()
-    
+  newData
+    .save()
+
     .then((data) => {
       console.log("Data saved successfully:", data);
       res.status(200).send("Data saved successfully");
@@ -70,4 +68,16 @@ app.post("/signup", async (req, res) => {
       console.error(err);
       res.status(500).send("Error saving data");
     });
+});
+
+app.get('/userData', async (req, res) => { 
+  const {email} = req.body;
+  const userData = await UserModel.findOne({email:email}); 
+  res.json(userData); 
+  console.log("user:", userData);
+}); 
+
+
+app.listen(port, () => {
+  console.log(`Server running on port : ${port}`);
 });

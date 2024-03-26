@@ -1,0 +1,44 @@
+.home{
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg);
+    height: 100vh;
+    overflow: hidden;
+   
+}
+
+.container{
+    background:transparent;
+    height: 400px;
+    width: 350px;
+    box-shadow: 1px 1px 150px rgba(214, 217, 218, 0.493);
+    border: none;
+    
+}
+
+.heading{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 2px 10px rgb(0, 0, 0);
+    color: white;
+}
+.profile-picture{
+    display: flex;
+  justify-content: center;
+}
+
+.profile-picture img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    
+    
+    
+
+}
+.profileData{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin: 20px;
+    color: rgb(245, 247, 247);
+    font-family: cursive;
+}
